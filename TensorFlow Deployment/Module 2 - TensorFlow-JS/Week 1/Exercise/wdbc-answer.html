@@ -46,7 +46,8 @@
                                   onEpochEnd: async(epoch, logs) =>{
                                       console.log("Epoch: " + epoch + " Loss: " + logs.loss + " Accuracy: " + logs.acc);
                                   }
-                              }});            
+                              }});
+            await model.save('downloads://my_model');
         }
         run();
     </script>
